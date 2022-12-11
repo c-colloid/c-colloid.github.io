@@ -2,8 +2,9 @@
 title: PBReplacer
 description: PhysBoneを再設置する拡張
 layout: post
-permalink: /PBReplacer/
+permalink: PBReplacer.md
 sidebar: PBR_sidebar
+folder: PBReplacer
 ---
 
 # PBRのページ
