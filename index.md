@@ -1,6 +1,6 @@
 ---
 title: TopPage
-layout: home
+sidebar: mydoc_sidebar
 ---
 # ｺﾛｲﾄﾞのページ
 - [PBReplacer](PBReplacer/index.md) - PhysBonesを骨から剥がす拡張
