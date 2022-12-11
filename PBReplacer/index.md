@@ -3,4 +3,4 @@
 
 1コンポーネント1オブジェクトとして再配置するので、PhysBonesの一括編集やQuest対応時の編集またはPhysBonesのアニメーション制御が簡単になります。
 
-[トップに戻る](c-colloid.github.io/index.md)
+[トップに戻る](/index.md)
