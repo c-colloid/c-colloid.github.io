@@ -1,5 +1,8 @@
 ---
 title: BoneSelector
+author: Colloid
+date: 2022-12-10
+category: Jekyll
 layout: post
 ---
 
