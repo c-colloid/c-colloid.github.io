@@ -91,4 +91,5 @@ defaults:
 
 sidebars:
 - home_sidebar
-- mydoc_sidebar
+- PBR_sidebar
+- BS_sidebar
