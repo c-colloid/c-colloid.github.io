@@ -62,6 +62,7 @@ entries:
       output: web, pdf
 
   - title: 戻る
+    level: three
     url: /index.html
     output: web
 
