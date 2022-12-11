@@ -24,7 +24,7 @@ entries:
     folderitems:
 
     - title: Top
-      url: /about.md
+      url: /
       output: web, pdf
       type: homepage
 

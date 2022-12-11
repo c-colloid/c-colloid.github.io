@@ -9,7 +9,7 @@ entries:
     output: web
     folderitems:
     - title: About
-      url: /_pages/about.md
+      url: /_pages/about.html
       output: web
     - title: PBReplacer
       url: /PBReplacer/
