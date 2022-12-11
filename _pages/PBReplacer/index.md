@@ -3,6 +3,7 @@ title: PBReplacer
 description: PhysBoneを再設置する拡張
 layout: home
 category: Jekyll
+permalink: /PBReplacer/
 ---
 
 # PBRのページ
