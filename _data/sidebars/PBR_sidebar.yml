@@ -7,7 +7,7 @@ entries:
   version: 1.3.0
   folders: 
 
-  - title: Test
+  - title: 
     output: pdf
     type: frontmatter
     folderitems:
@@ -61,8 +61,8 @@ entries:
       url: 100.md
       output: web, pdf
 
-- title: 戻る
-  url: /c-colloid.github.io/
-  output: web
+  - title: 戻る
+    url: /c-colloid.github.io/
+    output: web
 
 # Copyright 2021 Google LLC
