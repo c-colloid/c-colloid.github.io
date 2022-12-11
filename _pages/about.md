@@ -1,4 +1,5 @@
 ---
+title: About
 category: Jekyll
 layout: post
 ---
