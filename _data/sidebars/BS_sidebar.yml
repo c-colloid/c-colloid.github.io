@@ -1,0 +1,60 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  level: two
+  product: BoneSelector
+  version: 1.1.0
+  folders: /BoneSelector/
+
+  - title: 
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Top
+      url: /about.md
+      output: web, pdf
+      type: homepage
+
+    - title: 導入方法・起動方法
+      url: /start.md
+      output: web, pdf
+
+    - title: 使い方
+      url: /howtouse.md
+      output: web, pdf
+
+    - title: その他詳細
+      url: /detailes.md
+      output: web, pdf
+
+    - title: Support
+      url: /support.html
+      output: web, pdf
+
+  - title: Release Notes
+    output: web, pdf
+    folderitems: /ReleseNote/
+
+    - title: 1.1.0 Release notes
+      url: 110.md
+      output: web, pdf
+
+    - title: 1.0.0 Release notes
+      url: 100.md
+      output: web, pdf
+
+# Copyright 2021 Google LLC
