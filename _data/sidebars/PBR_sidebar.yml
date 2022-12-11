@@ -62,7 +62,7 @@ entries:
       output: web, pdf
 
   - title: 戻る
-    url: index.html
+    url: /index.html
     output: web
 
 # Copyright 2021 Google LLC
