@@ -4,7 +4,7 @@ entries:
 - title: Sidebar
   product: BoneSelector
   version: 1.1.0
-  folders: /BoneSelector/
+  folders: /BoneSelector
 
   - title: 
     output: pdf

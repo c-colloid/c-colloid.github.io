@@ -4,7 +4,7 @@ entries:
 - title: Sidebar
   product: PBReplacer
   version: 1.3.0
-  folders: /PBReplacer/
+  folders: /PBReplacer
 
   - title: Test
     output: pdf
