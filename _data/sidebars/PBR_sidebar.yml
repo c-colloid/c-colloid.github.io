@@ -62,7 +62,7 @@ entries:
       output: web, pdf
 
   - title: 戻る
-    url: (/c-colloid.github.io/)
+    url: index.html
     output: web
 
 # Copyright 2021 Google LLC
