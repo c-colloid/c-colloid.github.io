@@ -3,7 +3,7 @@ title: PBReplacer
 description: PhysBoneを再設置する拡張
 layout: post
 permalink: /PBReplacer/
-sidebar: PBR_sidebar
+sidebar: pbr_sidebar
 ---
 
 # PBRのページ
