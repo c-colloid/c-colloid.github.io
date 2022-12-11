@@ -4,7 +4,7 @@ entries:
 - title: Sidebar
   product: PBReplacer
   version: 1.3.0
-  folders: /PBReplacer
+  folders: 
 
   - title: Test
     output: pdf
@@ -46,7 +46,7 @@ entries:
 
   - title: Release Notes
     output: web, pdf
-    folderitems: /ReleseNote/
+    folderitems: 
 
     - title: 1.3.0 Release notes
       url: 130.md

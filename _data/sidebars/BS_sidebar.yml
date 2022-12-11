@@ -4,7 +4,7 @@ entries:
 - title: Sidebar
   product: BoneSelector
   version: 1.1.0
-  folders: /BoneSelector
+  folders: 
 
   - title: 
     output: pdf
@@ -46,7 +46,7 @@ entries:
 
   - title: Release Notes
     output: web, pdf
-    folderitems: /ReleseNote/
+    folderitems: 
 
     - title: 1.1.0 Release notes
       url: 110.md
