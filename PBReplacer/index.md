@@ -1,7 +1,7 @@
 ---
 title: PBReplacer
 description: PhysBoneを再設置する拡張
-layout: home
+layout: post
 category: Jekyll
 permalink: /PBReplacer/
 ---
