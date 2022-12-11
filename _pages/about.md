@@ -1,7 +1,9 @@
 ---
 title: About
+author: Tao He
+date: 2022-02-04
 category: Jekyll
 layout: post
 ---
-# About
-Index about page
+
+This is an about page.
