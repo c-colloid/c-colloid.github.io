@@ -1,5 +1,6 @@
 ---
 description: PhysBoneを再設置する拡張
+layout: home
 ---
 
 # PBRのページ
