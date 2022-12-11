@@ -61,4 +61,8 @@ entries:
       url: 100.md
       output: web, pdf
 
+- title: 戻る
+  url: /c-colloid.github.io/
+  output: web
+
 # Copyright 2021 Google LLC
