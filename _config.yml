@@ -90,9 +90,9 @@ defaults:
   -
     scope:
       path: "/BoneSelector"
-      type: "posts"
+      type: "pages"
     values:
-      layout: "post"
+      layout: "page"
       comments: false
       search: true
       sidebar: BS_sidebar
