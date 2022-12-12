@@ -7,8 +7,6 @@ sidebar: PBR_sidebar
 folder: PBReplacer
 ---
 
-# 導入方法・起動方法
-
 ## 導入方法
 
 unitypackgeをインストールします
