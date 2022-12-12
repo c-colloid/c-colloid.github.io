@@ -89,7 +89,7 @@ defaults:
 
   -
     scope:
-      path: "/BoneSelector"
+      path: "BoneSelector"
       type: "pages"
     values:
       layout: "page"
