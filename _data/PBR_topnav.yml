@@ -4,9 +4,9 @@ topnav:
 - title: Topnav
   items:
     - title: GitHub
-      external_url: https://github.com/c-colloid/c-colloid.github.io/
-    - title: About
-      url: about.html
+      external_url: https://github.com/c-colloid/PBReplacer-VPM
+    - title: ReleaseNote
+      url: /PBReplacer/ReleaseNote/
 
 #Topnav dropdowns
 topnav_dropdowns:

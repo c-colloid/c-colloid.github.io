@@ -63,6 +63,7 @@ entries:
 
   - title: Other
     output: web
+    product: Other
     folderitems:
 
     - title: BoneSelector

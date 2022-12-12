@@ -98,6 +98,17 @@ defaults:
       sidebar: BS_sidebar
       topnav: BS_topnav
 
+  -
+    scope:
+      path: "PBReplacer"
+      type: "pages"
+    values:
+      layout: "page"
+      comments: false
+      search: true
+      sidebar: PBR_sidebar
+      topnav: PBR_topnav
+
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
