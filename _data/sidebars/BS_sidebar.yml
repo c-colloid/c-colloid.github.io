@@ -30,15 +30,15 @@ entries:
       type: homepage
 
     - title: 導入方法・起動方法
-      url: /start.md
+      url: /start.html
       output: web, pdf
 
     - title: 使い方
-      url: /howtouse.md
+      url: /howtouse.html
       output: web, pdf
 
     - title: その他詳細
-      url: /detailes.md
+      url: /detailes.html
       output: web, pdf
 
     - title: Support
@@ -50,11 +50,11 @@ entries:
     folderitems: 
 
     - title: 1.1.0 Release notes
-      url: 110.md
+      url: 110.html
       output: web, pdf
 
     - title: 1.0.0 Release notes
-      url: 100.md
+      url: 100.html
       output: web, pdf
 
   - title: Other
