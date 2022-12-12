@@ -1,10 +1,10 @@
 ---
-title: PBRの説明
+title: 使い方
 description: PhysBoneを再設置する拡張
 layout: post
+permalink: howtouse.html
 sidebar: PBR_sidebar
-permalink: PBRabout.html
 folder: PBReplacer
 ---
-# About
-this is About
+
+# 使い方

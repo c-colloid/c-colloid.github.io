@@ -25,7 +25,7 @@ entries:
     folderitems:
 
     - title: Top
-      url: /about.html
+      url: /
       output: web, pdf
       type: homepage
 
@@ -42,7 +42,7 @@ entries:
       output: web, pdf
 
     - title: Support
-      url: /support.html
+      url: /PBRabout.html
       output: web, pdf
 
   - title: Release Notes
@@ -64,6 +64,11 @@ entries:
   - title: Other
     output: web
     folderitems:
+
+    - title: BoneSelector
+      url: /BoneSelector
+      output: web, pdf
+    
     - title: 戻る
       url: /index.html
       output: web

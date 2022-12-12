@@ -57,4 +57,16 @@ entries:
       url: 100.md
       output: web, pdf
 
+  - title: Other
+    output: web
+    folderitems:
+
+    - title: PBReplacer
+      url: /PBReplacer
+      output: web, pdf
+    
+    - title: 戻る
+      url: /index.html
+      output: web
+
 # Copyright 2021 Google LLC
