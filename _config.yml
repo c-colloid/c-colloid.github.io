@@ -92,7 +92,7 @@ defaults:
       path: "/BoneSelector/"
       type: "posts"
     values:
-      layout: "BS"
+      layout: "post"
       comments: false
       search: true
       sidebar: BS_sidebar

@@ -1,9 +1,6 @@
 ---
 title: BoneSelector
-layout: BS
-category: Jekyll
 permalink: BoneSelector.html
-sidebar: BS_sidebar
 folder: BoneSelector
 ---
 BoneSelectorはシーンウィンドウ上でボーンを表示・選択・複数選択する事ができるようにする拡張です
