@@ -89,7 +89,7 @@ defaults:
 
   -
     scope:
-      path: "/BoneSelector/"
+      path: "/BoneSelector"
       type: "posts"
     values:
       layout: "post"
