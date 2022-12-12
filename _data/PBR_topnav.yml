@@ -6,7 +6,7 @@ topnav:
     - title: GitHub
       external_url: https://github.com/c-colloid/PBReplacer-VPM
     - title: ReleaseNote
-      url: /PBReplacer/ReleaseNote/
+      url: /PBRReleaseNote.html
 
 #Topnav dropdowns
 topnav_dropdowns:
