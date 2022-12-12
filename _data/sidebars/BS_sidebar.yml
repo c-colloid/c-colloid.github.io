@@ -25,7 +25,7 @@ entries:
     folderitems:
 
     - title: Top
-      url: /
+      url: /BoneSelector.html
       output: web, pdf
       type: homepage
 

@@ -87,6 +87,17 @@ defaults:
       sidebar: home_sidebar
       topnav: topnav
 
+  -
+    scope:
+      path: "/BoneSelector/"
+      type: "posts"
+    values:
+      layout: "BS"
+      comments: false
+      search: true
+      sidebar: BS_sidebar
+      topnav: BS_topnav
+
 # these are defaults used for the frontmatter for these file types
 
 sidebars:

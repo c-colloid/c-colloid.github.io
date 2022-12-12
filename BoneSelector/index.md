@@ -1,6 +1,6 @@
 ---
 title: BoneSelector
-layout: post
+layout: BS
 category: Jekyll
 permalink: BoneSelector.html
 sidebar: BS_sidebar
