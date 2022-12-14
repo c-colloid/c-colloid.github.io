@@ -50,15 +50,15 @@ entries:
     folderitems: 
 
     - title: 1.3.0 Release notes
-      url: 130.html
+      url: /130.html
       output: web, pdf
 
     - title: 1.1.0 Release notes
-      url: 110.html
+      url: /110.html
       output: web, pdf
 
     - title: 1.0.0 Release notes
-      url: 100.html
+      url: /100.html
       output: web, pdf
 
 - title: sidebar
