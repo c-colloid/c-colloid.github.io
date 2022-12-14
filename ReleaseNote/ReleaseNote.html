@@ -10,7 +10,7 @@ folder: ReleaseNote
 
     <div class="post-list">
         {% for post in site.posts limit:10 %}
-            {% if post.tag == 'PBR' %}
+            {% if post.tags == 'PBR' %}
                 {% continue %}
             {% endif %}
 
