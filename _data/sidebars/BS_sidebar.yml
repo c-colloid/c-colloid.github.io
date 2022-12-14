@@ -42,7 +42,7 @@ entries:
       output: web, pdf
 
     - title: Support
-      url: /support.html
+      url: /BSabout.html
       output: web, pdf
 
   - title: Release Notes
