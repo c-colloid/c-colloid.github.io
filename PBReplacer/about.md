@@ -1,7 +1,6 @@
 ---
 title: PBRの説明
 description: PhysBoneを再設置する拡張
-layout: post
 sidebar: PBR_sidebar
 permalink: PBRabout.html
 folder: PBReplacer

@@ -1,7 +1,6 @@
 ---
 title: ReleaseNote
 description: PhysBoneを再設置する拡張
-layout: post
 permalink: PBRReleaseNote.html
 sidebar: PBR_sidebar
 folder: PBRReleaseNote
