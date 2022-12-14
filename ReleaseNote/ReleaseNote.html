@@ -15,6 +15,9 @@ folder: ReleaseNote
     <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} /
             {% for tag in post.tags %}
+                {% if tag == 'PBR' %}
+                    {% continue %}
+                {% endif %}
 
                 <a href="{{ "tag_" | append: tag | append: ".html"}}">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
 
