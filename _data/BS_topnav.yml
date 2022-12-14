@@ -6,7 +6,7 @@ topnav:
     - title: GitHub
       external_url: https://github.com/c-colloid/BoneSelector-VPM
     - title: ReleaseNote
-      url: /ReleaseNote/
+      url: /ReleaseNote.html
 
 #Topnav dropdowns
 topnav_dropdowns:
