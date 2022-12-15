@@ -1,6 +1,5 @@
 ---
-title: News
-sidebar: home_sidebar
+title: ReleaseNote
 keywords: news, blog, updates, release notes, announcements
 permalink: ReleaseNote.html
 toc: false
@@ -10,15 +9,15 @@ folder: ReleaseNote
 
     <div class="post-list">
         {% for post in site.posts limit:10 %}
-{% assign tagispbr = false %}
-{% for tag in post.tags %}
-            {% if tag == 'PBR' %}
-                {% assign tagispbr = true %}
+            {% assign tagispbr = false %}
+            {% for tag in post.categories %}
+                {% if tag == 'BoneSelector' %}
+                    {% assign tagispbr = true %}
+                {% endif %}
+            {% endfor %}
+            {% if tagispbr == false %}
+                {% continue %}
             {% endif %}
-{% endfor %}
-{% if tagispbr == true %}
-{% continue %}
-{% endif %}
 
     <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} /
