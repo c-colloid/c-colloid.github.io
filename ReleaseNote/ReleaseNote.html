@@ -13,7 +13,7 @@ folder: ReleaseNote
 {% assign tagispbr = false %}
 {% for tag in post.tags %}
             {% if tag == 'PBR' %}
-                {% tagispbr = true %}
+                {% assign tagispbr = true %}
             {% endif %}
 {% endfor %}
 {% if tagispbr == true %}
