@@ -10,9 +10,15 @@ folder: ReleaseNote
 
     <div class="post-list">
         {% for post in site.posts limit:10 %}
-            {% if post.tags == 'PBR' %}
-                {% continue %}
+{tagispbr = false}
+{% for tag in post.tags %}
+            {% if tag == 'PBR' %}
+                {tagispbr = true}
             {% endif %}
+{% endfor %}
+{% if tagispbr == true %}
+{% continue %}
+{% endif %}
 
     <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} /
