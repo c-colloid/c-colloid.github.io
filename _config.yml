@@ -97,6 +97,16 @@ defaults:
       search: true
       sidebar: BS_sidebar
       topnav: BS_topnav
+  -
+    scope:
+      path: "BoneSelector"
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+      search: true
+      sidebar: BS_sidebar
+      topnav: BS_topnav
 
   -
     scope:
