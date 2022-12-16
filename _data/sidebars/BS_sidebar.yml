@@ -50,11 +50,11 @@ entries:
     folderitems: 
 
     - title: 1.1.0 Release notes
-      url: 110.html
+      url: /110.html
       output: web, pdf
 
     - title: 1.0.0 Release notes
-      url: v100.html
+      url: /v100.html
       output: web, pdf
 
   - title: Other
