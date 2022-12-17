@@ -38,11 +38,11 @@ entries:
       output: web, pdf
 
     - title: 使い方
-      url: /howtouse.html
+      url: /BShowtouse.html
       output: web, pdf
 
     - title: その他詳細
-      url: /detailes.html
+      url: /BSdetailes.html
       output: web, pdf
 
   - title: Release Notes
