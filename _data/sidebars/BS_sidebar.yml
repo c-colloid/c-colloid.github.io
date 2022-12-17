@@ -40,11 +40,11 @@ entries:
     - title: 使い方
       url: /BShowtouse.html
       output: web, pdf
-
+{% comment %}
     - title: その他詳細
       url: /BSdetailes.html
       output: web, pdf
-
+{% endcomment %}
   - title: Release Notes
     output: web, pdf
     folderitems: 
