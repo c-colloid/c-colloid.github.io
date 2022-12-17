@@ -7,7 +7,7 @@ permalink: BShowtouse.html
 ## エディターの見かた
 
 エディターウィンドウではBoneSelectorの表示をカスタマイズできます
-
+![Alt text](../Pictures/BoneSelector/HowtoUse01.jpg)
 - ### Avatar
 ボーンを表示させたいアバターを選択します。現在、AvatarDiscriptorの付いたアバターのみが対象となっています。
 
@@ -31,7 +31,7 @@ Rigでヒューマノイドに設定したボーンを表示するかどうか�
 ## コンポーネントの見かた
 ボーンを表示中は各ボーンにBoneSettingというコンポーネントが付きます
 こちらではボーンの操作をコントロールできます
-
+![Alt text](../Pictures/BoneSelector/HowtoUse02.jpg)
 - ### DrawBone
 選択したボーンを非表示にできます。一時的に表示を消しておきたいボーンはこちらをオフにしてください。
 
