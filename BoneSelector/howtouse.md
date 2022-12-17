@@ -8,32 +8,32 @@ permalink: BShowtouse.html
 
 エディターウィンドウではBoneSelectorの表示をカスタマイズできます
 
-### Avatar
+- ### Avatar
 ボーンを表示させたいアバターを選択します。現在、AvatarDiscriptorの付いたアバターのみが対象となっています。
 
-### FormType
+- ### FormType
 ボーンの表示形式を変更します
 
-### BoneColor
+- ### BoneColor
 ボーンの色を変更できます
 
-### InFront
+- ### InFront
 ボーンを最前面に表示するかどうかを変更します。現在WireMesh式では機能しません。
 
-### HumanoidBone
+- ### HumanoidBone
 Rigでヒューマノイドに設定したボーンを表示するかどうかを設定します。
 
-### BoneName
+- ### BoneName
 ボーンの名前を表示するかどうかを設定します
-### Button
+- ### Button
 ボーンの表示のオンオフをコントロールします。ボーン表示中に動かしたボーンは機能をオフにすると元の位置に戻ります。
 
 ## コンポーネントの見かた
 ボーンを表示中は各ボーンにBoneSettingというコンポーネントが付きます
 こちらではボーンの操作をコントロールできます
 
-- ＤrawBone
+- ### ＤrawBone
 選択したボーンを非表示にできます。一時的に表示を消しておきたいボーンはこちらをオフにしてください。
 
-- BakePose
+- ### BakePose
 オンにするとボーン表示中に動かしたボーンの位置を固定できます
