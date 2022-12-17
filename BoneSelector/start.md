@@ -9,7 +9,7 @@ permalink: BSstart.html
 unitypackgeをUnityに読み込んで使います
 
 ## 起動方法
-###　エディター呼び出し
+### エディター呼び出し
  BoneSelectorはエディターウィンドウを呼びだして使います
  
  呼び出し方には3通りあります
@@ -20,6 +20,6 @@ unitypackgeをUnityに読み込んで使います
 
  3.ツールバーのコントロールメニューより![UI-ViewTool](https://user-images.githubusercontent.com/28706700/205558302-42774f85-9742-4246-ad5e-f81e059782f4.png)一番右端のメニューを選択し、BoneSelectorを選択
 
- ###　ボーン表示
+ ### ボーン表示
 
  エディターウィンドウにAvatarをセットしButtonを押すとボーンの表示がはじまります
