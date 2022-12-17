@@ -34,7 +34,7 @@ entries:
       output: web, pdf
 
     - title: 導入方法・起動方法
-      url: /start.html
+      url: /BSstart.html
       output: web, pdf
 
     - title: 使い方
