@@ -41,9 +41,6 @@ entries:
       url: /BShowtouse.html
       output: web, pdf
 
-    - title: その他詳細
-      url: /BSdetailes.html
-      output: web, pdf
 
   - title: Release Notes
     output: web, pdf
