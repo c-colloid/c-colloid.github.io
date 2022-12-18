@@ -1,8 +1,12 @@
 ---
-title: 使い方
-description: PhysBoneを再設置する拡張
-permalink: detailes.html
+title: 詳細
+description: BoneSelectorの詳細
+permalink: BSdetailes.html
 folder: BoneSelector
 ---
 
-まずAvatarDiscriptorとPhysBonesを設定されているVRC用アバターを用意します。
+## エディターの詳細
+
+## コンポーネントの詳細
+
+## スクリプトの詳細
