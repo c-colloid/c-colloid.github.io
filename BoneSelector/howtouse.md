@@ -4,11 +4,23 @@ description: BoneSelectorの使い方
 summary: BoneSelectorはエディターのメニューによる操作とボーンについたコンポーネントによる操作に分けられています
 permalink: BShowtouse.html
 ---
+## 基本的な使い方
+
+[導入方法・起動方法](start.md)に従ってボーン表示を行うとアーマチュア以下のオブジェクトが全てボーンとして表示されます
+
+非表示にしているオブジェクトは除外されます
+
+表示されているボーンをクリックすることで選択することが出来ます
+
+選択されているボーンは赤色にハイライトされます
+
+ボーンの見た目はエディター上から変更することが出来ます
+
 ## エディターの見かた
 
 エディターウィンドウではBoneSelectorの表示をカスタマイズできます
 
-![Alt text](../Pictures/BoneSelector/HowtoUse01.jpg)
+![エディター画像](../Pictures/BoneSelector/HowtoUse01.jpg)
 
 ### 1.Avatar
 ボーンを表示させたいアバターを選択します
@@ -24,7 +36,7 @@ permalink: BShowtouse.html
 ### 4.InFront
 ボーンを最前面に表示するかどうかを変更します
 
-現在WireMesh式では機能しません
+現在WireMesh式では最前面表示しかできません
 
 ### 5.HumanoidBone
 Rigでヒューマノイドに設定したボーンを表示するかどうかを設定します
@@ -42,7 +54,7 @@ Rigでヒューマノイドに設定したボーンを表示するかどうか�
 
 こちらではボーンの操作をコントロールできます
 
-![Alt text](../Pictures/BoneSelector/HowtoUse02.jpg)
+![コンポーネント画像](../Pictures/BoneSelector/HowtoUse02.jpg)
 
 ### 1.DrawBone
 選択したボーンを非表示にできます
