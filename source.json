@@ -1,0 +1,17 @@
+{
+  "name": "Bone Selector",
+  "id": "jp.colloid.boneselector",
+  "url": "https://c-colloid.github.io/BoneSelector-VPM/index.json",
+  "author":{
+     "name": "colloid",
+     "url": "https://c-colloid.github.io/BoneSelector.html"
+  },
+  "description": "Select Bone tool on the Scene window.\nEasy Bone Selection.",
+  "infoLink":{
+     "url":"http://github.com/c-colloid/BoneSelector-VPM",
+     "text":"View on GitHub"
+  },
+  "githubRepos": [
+      "c-colloid/BoneSelector-VPM"
+  ],
+}
