@@ -3,12 +3,12 @@ layout: home
 
 hero:
   name: "ｺﾛｲﾄﾞのVPM拡張"
-  text: "VRChat向けUnity拡張ツール"
-  tagline: アバター制作をもっと快適に
+  text: "アバター制作を、もっとシンプルに"
+  tagline: VRChat向けUnity拡張ツール集
   actions:
     - theme: brand
-      text: ツール一覧
-      link: '#tools'
+      text: はじめる
+      link: /boneselector/getting-started
     - theme: alt
       text: GitHub
       link: https://github.com/c-colloid
@@ -16,50 +16,73 @@ hero:
 features:
   - icon: 🦴
     title: BoneSelector
-    details: シーン上でボーンを可視化・選択するツール
+    details: シーン上でボーンを可視化・選択。PhysBone設定やボーン操作を効率化
     link: /boneselector/
-    linkText: ドキュメントを見る
+    linkText: ドキュメント →
   - icon: 🔄
     title: PBReplacer
-    details: PhysBoneを骨から分離・再設定するツール
+    details: PhysBoneをアーマチュアから分離。一括編集やQuest対応を簡単に
     link: /pbreplacer/
-    linkText: ドキュメントを見る
+    linkText: ドキュメント →
   - icon: 🎛️
     title: FXCreator
-    details: FXレイヤーの作成を補助するツール
+    details: FXレイヤーの作成を補助。アニメーション設定を効率化
     link: /fxcreator/
-    linkText: ドキュメントを見る
+    linkText: ドキュメント →
   - icon: 👄
     title: LipSyncSetter
-    details: リップシンクの設定を補助するツール
+    details: リップシンクの設定を補助。表情設定を簡単に
     link: /lipsyncsetter/
-    linkText: ドキュメントを見る
+    linkText: ドキュメント →
 ---
 
-<style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-</style>
+<div class="home-content">
 
-## VCCへの追加方法 {#vcc}
+## インストール
 
-以下のURLをVRChat Creator Companion (VCC) に追加してください：
+VRChat Creator Companion (VCC) にリポジトリを追加してください。
 
 ```
 https://c-colloid.github.io/vpm/index.json
 ```
 
-### 手順
+**Settings** → **Packages** → **Add Repository** からURLを追加し、プロジェクトでパッケージを有効化します。
 
-1. VCCを開く
-2. Settings → Packages → Add Repository
-3. 上記URLを入力
-4. 「Add」をクリック
-5. プロジェクトでパッケージを追加
+</div>
 
-## お問い合わせ {#tools}
+<style>
+.home-content {
+  max-width: 688px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
 
-- **GitHub**: [c-colloid](https://github.com/c-colloid)
-- **サークル**: FUTEIKEI
+.home-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.home-content p {
+  font-size: 0.9375rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.home-content pre {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  font-size: 0.875rem;
+}
+
+.home-content code {
+  color: var(--vp-c-brand-1);
+}
+</style>
