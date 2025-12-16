@@ -2,7 +2,10 @@
 
 > PhysBoneをアーマチュアから分離・再配置するUnity拡張
 
-## Overview
+<div class="tool-links">
+  <a href="vcc://vpm/addRepo?url=https://c-colloid.github.io/vpm/index.json" class="tool-link primary">VCCに追加</a>
+  <a href="https://github.com/c-colloid/PBReplacer" class="tool-link" target="_blank">GitHub</a>
+</div>
 
 PBReplacerは、アーマチュア内のPhysBoneコンポーネントを抜き出して、アバタールート直下にまとめる拡張です。
 
@@ -11,7 +14,7 @@ PBReplacerは、アーマチュア内のPhysBoneコンポーネントを抜き�
 - Quest対応時の編集が楽に
 - PhysBoneのアニメーション制御が容易に
 
-## Features
+## 主な機能
 
 | 機能 | 説明 |
 |-----|------|
@@ -19,12 +22,16 @@ PBReplacerは、アーマチュア内のPhysBoneコンポーネントを抜き�
 | **再配置** | アバタールート直下に整理して配置 |
 | **一括管理** | 複数PhysBoneの一元管理が可能 |
 
-## Quick Start
+## クイックスタート
 
-1. **VCCでインストール**
-   - リポジトリURL: `https://c-colloid.github.io/vpm/index.json`
+### 1. インストール
 
-2. **ツールを起動**
-   - メニュー: `Tools` → `PBReplacer`
+上の「VCCに追加」ボタンをクリックしてリポジトリを追加
 
-詳しくは[導入方法](./getting-started)をご覧ください。
+### 2. 起動
+
+**Tools** → **PBReplacer** でエディタウィンドウを開く
+
+::: tip 詳細な手順
+[導入方法](./getting-started) で詳しい手順を確認できます
+:::

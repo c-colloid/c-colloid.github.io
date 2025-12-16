@@ -2,7 +2,10 @@
 
 > リップシンクの設定を補助するUnity拡張
 
-## Overview
+<div class="tool-links">
+  <a href="vcc://vpm/addRepo?url=https://c-colloid.github.io/vpm/index.json" class="tool-link primary">VCCに追加</a>
+  <a href="https://github.com/c-colloid/LipSyncSetter" class="tool-link" target="_blank">GitHub</a>
+</div>
 
 LipSyncSetterは、VRChatアバターのリップシンク設定を効率化するツールです。
 
@@ -10,12 +13,16 @@ LipSyncSetterは、VRChatアバターのリップシンク設定を効率化す�
 詳細ドキュメントは準備中です
 :::
 
-## Quick Start
+## クイックスタート
 
-1. **VCCでインストール**
-   - リポジトリURL: `https://c-colloid.github.io/vpm/index.json`
+### 1. インストール
 
-2. **ツールを起動**
-   - メニュー: `Tools` → `LipSyncSetter`
+上の「VCCに追加」ボタンをクリックしてリポジトリを追加
 
-詳しくは[導入方法](./getting-started)をご覧ください。
+### 2. 起動
+
+**Tools** → **LipSyncSetter** でエディタウィンドウを開く
+
+::: tip 詳細な手順
+[導入方法](./getting-started) で詳しい手順を確認できます
+:::

@@ -436,3 +436,44 @@
     font-size: 1.25rem !important;
   }
 }
+
+/* ============================================
+   Tool Links - VCC & GitHub Buttons
+   ============================================ */
+.tool-links {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 24px;
+  flex-wrap: wrap;
+}
+
+.tool-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+  transition: all 0.2s ease;
+}
+
+.tool-link:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.tool-link.primary {
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+.tool-link.primary:hover {
+  background: var(--vp-c-brand-2);
+  border-color: var(--vp-c-brand-2);
+  color: #fff;
+}

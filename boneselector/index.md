@@ -2,6 +2,11 @@
 
 > シーン上でアバターのボーンを可視化・選択するUnity拡張
 
+<div class="tool-links">
+  <a href="vcc://vpm/addRepo?url=https://c-colloid.github.io/vpm/index.json" class="tool-link primary">VCCに追加</a>
+  <a href="https://github.com/c-colloid/BoneSelector" class="tool-link" target="_blank">GitHub</a>
+</div>
+
 BoneSelectorは、Unityエディタ上でVRChatアバターのボーン構造を直感的に確認・操作するためのツールです。PhysBoneの設定確認や、特定ボーンへの素早いアクセスに役立ちます。
 
 ## 主な機能
@@ -18,11 +23,7 @@ BoneSelectorは、Unityエディタ上でVRChatアバターのボーン構造を
 
 ### 1. インストール
 
-VCCに以下のリポジトリを追加:
-
-```
-https://c-colloid.github.io/vpm/index.json
-```
+上の「VCCに追加」ボタンをクリックしてリポジトリを追加
 
 ### 2. 起動
 

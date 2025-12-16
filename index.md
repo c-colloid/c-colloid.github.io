@@ -7,8 +7,8 @@ hero:
   tagline: VRChat向けUnity拡張ツール
   actions:
     - theme: brand
-      text: はじめる
-      link: /boneselector/getting-started
+      text: VCCに追加
+      link: vcc://vpm/addRepo?url=https://c-colloid.github.io/vpm/index.json
     - theme: alt
       text: GitHub
       link: https://github.com/c-colloid
@@ -35,54 +35,3 @@ features:
     link: /lipsyncsetter/
     linkText: ドキュメント →
 ---
-
-<div class="home-content">
-
-## インストール
-
-VRChat Creator Companion (VCC) にリポジトリを追加してください。
-
-```
-https://c-colloid.github.io/vpm/index.json
-```
-
-**Settings** → **Packages** → **Add Repository** からURLを追加し、プロジェクトでパッケージを有効化します。
-
-</div>
-
-<style>
-.home-content {
-  max-width: 688px;
-  margin: 0 auto;
-  padding: 48px 24px 64px;
-}
-
-.home-content h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.home-content p {
-  font-size: 0.9375rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.home-content pre {
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px 0;
-  font-size: 0.875rem;
-}
-
-.home-content code {
-  color: var(--vp-c-brand-1);
-}
-</style>
