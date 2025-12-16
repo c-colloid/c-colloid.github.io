@@ -4,7 +4,7 @@
 
 <div class="tool-links">
   <a href="vcc://vpm/addRepo?url=https://c-colloid.github.io/vpm/index.json" class="tool-link primary">VCCに追加</a>
-  <a href="https://github.com/c-colloid/BoneSelector" class="tool-link" target="_blank">GitHub</a>
+  <a href="https://github.com/c-colloid/BoneSelector-VPM" class="tool-link" target="_blank">GitHub</a>
 </div>
 
 BoneSelectorは、Unityエディタ上でVRChatアバターのボーン構造を直感的に確認・操作するためのツールです。PhysBoneの設定確認や、特定ボーンへの素早いアクセスに役立ちます。

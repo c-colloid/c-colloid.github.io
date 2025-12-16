@@ -4,7 +4,7 @@
 
 <div class="tool-links">
   <a href="vcc://vpm/addRepo?url=https://c-colloid.github.io/vpm/index.json" class="tool-link primary">VCCに追加</a>
-  <a href="https://github.com/c-colloid/PBReplacer" class="tool-link" target="_blank">GitHub</a>
+  <a href="https://github.com/c-colloid/PBReplacer-VPM" class="tool-link" target="_blank">GitHub</a>
 </div>
 
 PBReplacerは、アーマチュア内のPhysBoneコンポーネントを抜き出して、アバタールート直下にまとめる拡張です。

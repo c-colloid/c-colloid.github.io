@@ -1,4 +1,4 @@
-// CHANGELOG.md を GitHub から取得するユーティリティ
+// CHANGELOG を GitHub から取得するユーティリティ
 
 interface ChangelogEntry {
   version: string
@@ -12,8 +12,55 @@ interface ChangelogData {
   error?: string
 }
 
-export async function fetchChangelog(repo: string): Promise<ChangelogData> {
-  const url = `https://raw.githubusercontent.com/c-colloid/${repo}/main/CHANGELOG.md`
+interface FetchOptions {
+  repo: string
+  path?: string  // デフォルト: CHANGELOG.md
+  branch?: string  // デフォルト: main
+}
+
+// リポジトリ設定
+const REPO_CONFIG: Record<string, FetchOptions> = {
+  'BoneSelector': {
+    repo: 'BoneSelector-VPM',
+    path: 'Packages/jp.colloid.boneselector/ChangeLog.md'
+  },
+  'PBReplacer': {
+    repo: 'PBReplacer-VPM',
+    path: 'Packages/jp.colloid.pbreplacer/ChangeLog.txt'
+  },
+  'LipSyncSetter': {
+    repo: 'LipSyncSetter',
+    path: 'CHANGELOG.md'
+  },
+  // FXCreater用（複数Changelog対応）
+  'FXCreater-EyeJiggling': {
+    repo: 'FXCreater',
+    path: 'EyeJigglingGenerator/Changelog.md'
+  },
+  'FXCreater-ExpressionParams': {
+    repo: 'FXCreater',
+    path: 'VRCExpressionParameters/Changelog.md'
+  },
+  'FXCreater-ClipGenerator': {
+    repo: 'FXCreater',
+    path: 'ClipGenerator/Changelog.md'
+  }
+}
+
+export async function fetchChangelog(toolName: string): Promise<ChangelogData> {
+  const config = REPO_CONFIG[toolName]
+
+  if (!config) {
+    return {
+      entries: [],
+      raw: '',
+      error: `Unknown tool: ${toolName}`
+    }
+  }
+
+  const branch = config.branch || 'main'
+  const path = config.path || 'CHANGELOG.md'
+  const url = `https://raw.githubusercontent.com/c-colloid/${config.repo}/${branch}/${path}`
 
   try {
     const response = await fetch(url)
@@ -39,18 +86,51 @@ export async function fetchChangelog(repo: string): Promise<ChangelogData> {
   }
 }
 
+// 複数のChangelogを取得して統合
+export async function fetchMultipleChangelogs(toolNames: string[]): Promise<ChangelogData> {
+  const results = await Promise.all(toolNames.map(name => fetchChangelog(name)))
+
+  const allEntries: ChangelogEntry[] = []
+  const errors: string[] = []
+
+  for (let i = 0; i < results.length; i++) {
+    const result = results[i]
+    const toolName = toolNames[i].replace('FXCreater-', '')
+
+    if (result.error) {
+      errors.push(`${toolName}: ${result.error}`)
+    } else {
+      // 各エントリにツール名を追加
+      for (const entry of result.entries) {
+        allEntries.push({
+          ...entry,
+          version: `${toolName} ${entry.version}`
+        })
+      }
+    }
+  }
+
+  return {
+    entries: allEntries,
+    raw: '',
+    error: errors.length > 0 ? errors.join(', ') : undefined
+  }
+}
+
 function parseChangelog(content: string): ChangelogEntry[] {
   const entries: ChangelogEntry[] = []
-
-  // ## [version] - date または ## version - date 形式をパース
-  const versionRegex = /^##\s+\[?([^\]\s]+)\]?(?:\s*-\s*(.+))?$/gm
   const lines = content.split('\n')
 
   let currentEntry: ChangelogEntry | null = null
   let contentLines: string[] = []
 
   for (const line of lines) {
-    const match = line.match(/^##\s+\[?([^\]\s\]]+)\]?(?:\s*-\s*(.+))?$/)
+    // 複数のフォーマットに対応:
+    // ## [1.4.1] - 2024-01-15
+    // ## [1.4.1]2024.12.18
+    // ## 1.4.1 - 2024-01-15
+    // ## v1.4.1
+    const match = line.match(/^##\s+\[?v?([^\]\s\-]+)\]?\s*[-]?\s*(.*)$/)
 
     if (match) {
       // 前のエントリを保存
@@ -80,28 +160,11 @@ function parseChangelog(content: string): ChangelogEntry[] {
   return entries
 }
 
-export function formatChangelogMarkdown(data: ChangelogData): string {
-  if (data.error) {
-    return `::: warning 取得エラー
-CHANGELOG.mdの取得に失敗しました: ${data.error}
-:::
-
-[GitHubで確認する](https://github.com/c-colloid/) でリポジトリを確認してください。`
+// GitHubリポジトリURL取得
+export function getGitHubUrl(toolName: string): string {
+  const config = REPO_CONFIG[toolName]
+  if (!config) {
+    return 'https://github.com/c-colloid'
   }
-
-  if (data.entries.length === 0) {
-    return `::: info
-更新履歴はまだありません。
-:::`
-  }
-
-  let markdown = ''
-
-  for (const entry of data.entries) {
-    const dateStr = entry.date ? ` - ${entry.date}` : ''
-    markdown += `## ${entry.version}${dateStr}\n\n`
-    markdown += `${entry.content}\n\n`
-  }
-
-  return markdown
+  return `https://github.com/c-colloid/${config.repo}`
 }
