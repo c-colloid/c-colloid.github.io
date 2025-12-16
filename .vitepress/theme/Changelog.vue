@@ -49,6 +49,10 @@ function formatContent(content: string): string {
   return content
     .split('\n')
     .map(line => {
+      // h3ヘッダー (### )
+      if (line.match(/^###\s+/)) {
+        return `</ul><h3>${line.replace(/^###\s+/, '')}</h3>`
+      }
       // リスト項目
       if (line.match(/^[-*]\s/)) {
         return `<li>${line.replace(/^[-*]\s/, '')}</li>`
@@ -61,6 +65,8 @@ function formatContent(content: string): string {
     })
     .join('')
     .replace(/(<li>.*<\/li>)+/g, '<ul>$&</ul>')
+    .replace(/<\/ul><h3>/g, '<h3>')  // 不要な</ul>を削除
+    .replace(/^<\/ul>/, '')  // 先頭の不要な</ul>を削除
 }
 </script>
 
@@ -97,5 +103,16 @@ function formatContent(content: string): string {
 .changelog .content :deep(p) {
   margin: 8px 0;
   color: var(--vp-c-text-2);
+}
+
+.changelog .content :deep(h3) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin: 16px 0 8px 0;
+}
+
+.changelog .content :deep(h3):first-child {
+  margin-top: 0;
 }
 </style>
