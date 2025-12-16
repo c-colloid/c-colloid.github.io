@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "ｺﾛｲﾄﾞのVPM拡張"
+  name: "FUTEIKEI Tools"
   text: "アバター制作を、もっとシンプルに"
-  tagline: VRChat向けUnity拡張ツール集
+  tagline: VRChat向けUnity拡張ツール
   actions:
     - theme: brand
       text: はじめる

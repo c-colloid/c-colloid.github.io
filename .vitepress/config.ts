@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'ｺﾛｲﾄﾞのVPM拡張',
-  description: 'VRChat向けUnity拡張のドキュメント',
+  title: 'FUTEIKEI Tools',
+  description: 'VRChat向けUnity拡張ツール - FUTEIKEI',
   lang: 'ja-JP',
 
   srcExclude: [
