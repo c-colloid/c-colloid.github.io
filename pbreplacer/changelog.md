@@ -1,13 +1,11 @@
+---
+outline: deep
+---
+
 # 更新履歴
 
-## v1.3.0
+<script setup>
+import { data } from './changelog.data'
+</script>
 
-- 機能改善
-
-## v1.1.0
-
-- 機能追加
-
-## v1.0.0
-
-- 初回リリース
+<Changelog :data="data" />

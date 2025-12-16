@@ -1,5 +1,11 @@
+---
+outline: deep
+---
+
 # 更新履歴
 
-::: warning 準備中
-このページは準備中です
-:::
+<script setup>
+import { data } from './changelog.data'
+</script>
+
+<Changelog :data="data" />
