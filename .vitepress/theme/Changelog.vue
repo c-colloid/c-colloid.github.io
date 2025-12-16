@@ -35,7 +35,7 @@ defineProps<{
       <div v-for="entry in data.entries" :key="entry.version" class="entry">
         <h2 :id="entry.version.toLowerCase().replace(/\./g, '-')">
           {{ entry.version }}
-          <span v-if="entry.date" class="date">{{ entry.date }}</span>
+          <span v-if="entry.date" class="date">({{ entry.date }})</span>
         </h2>
         <div class="content" v-html="formatContent(entry.content)"></div>
       </div>
