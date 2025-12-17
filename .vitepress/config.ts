@@ -62,9 +62,15 @@ export default defineConfig({
           items: [
             { text: '概要', link: '/fxcreator/' },
             { text: '導入方法', link: '/fxcreator/getting-started' },
-            { text: '使い方', link: '/fxcreator/usage' },
-            { text: '詳細設定', link: '/fxcreator/details' },
             { text: '更新履歴', link: '/fxcreator/changelog' },
+          ]
+        },
+        {
+          text: 'ツール',
+          items: [
+            { text: 'EyeJigglingGenerator', link: '/fxcreator/eye-jiggling' },
+            { text: 'VRCExpressionParameters', link: '/fxcreator/expression-params' },
+            { text: 'ClipGenerator', link: '/fxcreator/clip-generator' },
           ]
         }
       ],
