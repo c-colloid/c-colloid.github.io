@@ -16,19 +16,15 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/logo.png',
+    logo: 'Pictures/Futeikei_Logo.png',
 
     nav: [
-      { text: 'ホーム', link: '/' },
-      {
-        text: 'ツール',
-        items: [
-          { text: 'BoneSelector', link: '/boneselector/' },
-          { text: 'PBReplacer', link: '/pbreplacer/' },
-          { text: 'FXCreator', link: '/fxcreator/' },
-          { text: 'LipSyncSetter', link: '/lipsyncsetter/' },
-        ]
-      },
+      { text: 'ホーム', link: '/'},
+      
+      { text: 'BoneSelector', link: '/boneselector/', activeMatch: '/boneselector/'},
+      { text: 'PBReplacer', link: '/pbreplacer/', activeMatch: '/pbreplacer/'},
+      { text: 'FXCreator', link: '/fxcreator/', activeMatch: '/fxcreator/' },
+      { text: 'LipSyncSetter', link: '/lipsyncsetter/', activeMatch: '/lipsyncsetter/' },
     ],
 
     sidebar: {
