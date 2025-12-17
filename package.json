@@ -8,7 +8,12 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "keywords": ["vpm", "vrchat", "unity", "documentation"],
+  "keywords": [
+    "vpm",
+    "vrchat",
+    "unity",
+    "documentation"
+  ],
   "author": "c-colloid",
   "license": "MIT",
   "devDependencies": {
