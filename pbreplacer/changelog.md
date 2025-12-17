@@ -4,12 +4,22 @@ outline: deep
 
 # 更新履歴
 
-::: info 手動管理
-このページは手動で更新されています。最新情報は[GitHub](https://github.com/c-colloid/PBReplacer-VPM)をご確認ください。
-:::
+<script setup>
+import { data } from './changelog.data'
+</script>
 
-## v1.0.0
-
-- 初回リリース
-- PhysBone一括置換機能
-- プレハブ対応
+<Changelog :data="data">
+  <template #fallback>
+    <div class="custom-block info">
+      <p class="custom-block-title">手動管理</p>
+      <p>GitHubからの自動取得に失敗したため、手動管理の内容を表示しています。
+      最新情報は<a href="https://github.com/c-colloid/PBReplacer-VPM">GitHub</a>をご確認ください。</p>
+    </div>
+    <h2 id="v1-0-0">v1.0.0</h2>
+    <ul>
+      <li>初回リリース</li>
+      <li>PhysBone一括置換機能</li>
+      <li>プレハブ対応</li>
+    </ul>
+  </template>
+</Changelog>

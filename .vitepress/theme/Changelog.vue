@@ -18,11 +18,14 @@ defineProps<{
 
 <template>
   <div class="changelog">
-    <div v-if="data.error" class="error">
-      <div class="custom-block warning">
-        <p class="custom-block-title">取得エラー</p>
-        <p>CHANGELOG.mdの取得に失敗しました: {{ data.error }}</p>
-      </div>
+    <!-- エラー時はフォールバックスロットを表示 -->
+    <div v-if="data.error">
+      <slot name="fallback">
+        <div class="custom-block warning">
+          <p class="custom-block-title">取得エラー</p>
+          <p>CHANGELOG.mdの取得に失敗しました: {{ data.error }}</p>
+        </div>
+      </slot>
     </div>
 
     <div v-else-if="data.entries.length === 0" class="empty">
