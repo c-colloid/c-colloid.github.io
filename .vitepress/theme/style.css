@@ -181,8 +181,9 @@
 }
 
 .VPSidebarItem .text {
-  font-size: 0.875rem !important;
+  font-size: 0.995rem !important;
   font-weight: 500 !important;
+  margin-top: 1px
 }
 
 .VPSidebarItem.is-active > .item > .link > .text {
@@ -196,7 +197,7 @@
 
 /* Section titles in sidebar */
 .VPSidebarItem.level-0 > .item > .text {
-  font-size: 0.75rem !important;
+  font-size: 1.25rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
