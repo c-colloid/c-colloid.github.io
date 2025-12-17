@@ -16,7 +16,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: 'Pictures/Futeikei_Logo.png',
+    logo: 'logo.png',
 
     nav: [
       { text: 'ホーム', link: '/'},
