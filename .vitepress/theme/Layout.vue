@@ -7,7 +7,8 @@ const { Layout } = DefaultTheme
 
 <template>
   <Layout>
-    <template #nav-bar-title-after>
+    <!-- デフォルトメニューの位置（検索の後）にカスタムナビを配置 -->
+    <template #nav-bar-content-after>
       <CustomNav />
     </template>
   </Layout>

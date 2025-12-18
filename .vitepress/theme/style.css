@@ -172,6 +172,18 @@
   display: none !important;
 }
 
+/* カスタムナビの配置調整 */
+.VPNavBar .content-body {
+  display: flex;
+  align-items: center;
+}
+
+/* カスタムナビを検索の後、右側要素の前に配置 */
+.VPNavBar .custom-nav {
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
 /* ============================================
    Sidebar - Information Architecture
    ============================================ */

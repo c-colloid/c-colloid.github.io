@@ -78,64 +78,62 @@ function isActive(item: { activeMatch?: string; link?: string }) {
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-left: 16px;
-  padding-left: 16px;
-  border-left: 1px solid var(--vp-c-divider);
+  /* VitePressの他の要素と同じ高さに揃える */
+  height: var(--vp-nav-height);
 }
 
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 0.875rem;
+  gap: 5px;
+  padding: 0 12px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-1);
   text-decoration: none;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.25s, background-color 0.25s;
 }
 
 .nav-link:hover {
-  color: var(--vp-c-text-1);
-  background-color: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-default-soft);
 }
 
 .nav-link.active {
   color: var(--vp-c-brand-1);
 }
 
-.nav-link.active:hover {
-  background-color: var(--vp-c-brand-soft);
-}
-
 /* ホームリンク - アイコンのみ */
 .nav-link.home-link {
-  padding: 6px 8px;
-}
-
-.nav-link.home-link:hover {
-  color: var(--vp-c-brand-1);
+  padding: 0 8px;
 }
 
 .nav-icon {
   flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.nav-link:hover .nav-icon,
+.nav-link.active .nav-icon {
+  opacity: 1;
 }
 
 .nav-text {
-  line-height: 1;
+  line-height: 32px;
 }
 
 /* 分割線 */
 .nav-divider {
   width: 1px;
-  height: 16px;
+  height: 24px;
   background-color: var(--vp-c-divider);
   margin: 0 8px;
 }
 
-/* モバイル対応 - ナビを非表示 */
-@media (max-width: 768px) {
+/* タブレット以下で非表示（ハンバーガーメニューを使用） */
+@media (max-width: 959px) {
   .custom-nav {
     display: none;
   }
