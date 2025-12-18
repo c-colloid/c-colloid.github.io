@@ -167,9 +167,9 @@
   font-size: 0.9375rem !important;
 }
 
-.VPNavBarMenuLink {
-  font-size: 0.875rem !important;
-  font-weight: 500 !important;
+/* デフォルトのナビメニューを非表示（カスタムナビを使用） */
+.VPNavBarMenu.menu {
+  display: none !important;
 }
 
 /* ============================================
