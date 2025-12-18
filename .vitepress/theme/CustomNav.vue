@@ -5,16 +5,14 @@ import { computed } from 'vue'
 
 const { page } = useData()
 
-// ナビゲーション定義
 const navItems = [
   {
-    text: '',
+    text: 'ホーム',
     link: '/',
     icon: House,
     activeMatch: '^/$',
     isHome: true
   },
-  { type: 'divider' as const },
   {
     text: 'BoneSelector',
     link: '/boneselector/',
@@ -43,7 +41,7 @@ const navItems = [
 
 const currentPath = computed(() => '/' + page.value.relativePath.replace(/\.md$/, '').replace(/index$/, ''))
 
-function isActive(item: { activeMatch?: string; link?: string }) {
+function isActive(item: { activeMatch?: string }) {
   if (!item.activeMatch) return false
   if (item.activeMatch === '^/$') {
     return currentPath.value === '/' || currentPath.value === ''
@@ -53,88 +51,100 @@ function isActive(item: { activeMatch?: string; link?: string }) {
 </script>
 
 <template>
-  <nav class="custom-nav">
-    <template v-for="(item, index) in navItems" :key="index">
-      <span v-if="item.type === 'divider'" class="nav-divider" aria-hidden="true"></span>
-      <a
-        v-else
-        :href="item.link"
-        class="nav-link"
-        :class="{
-          active: isActive(item),
-          'home-link': item.isHome
-        }"
-        :aria-label="item.isHome ? 'ホーム' : item.text"
-      >
-        <component :is="item.icon" class="nav-icon" :size="item.isHome ? 18 : 15" :stroke-width="item.isHome ? 2 : 1.75" />
-        <span v-if="!item.isHome" class="nav-text">{{ item.text }}</span>
-      </a>
-    </template>
+  <nav class="icon-nav" role="navigation" aria-label="メインナビゲーション">
+    <a
+      v-for="item in navItems"
+      :key="item.link"
+      :href="item.link"
+      class="icon-nav-link"
+      :class="{ active: isActive(item) }"
+      :title="item.text"
+      :aria-label="item.text"
+      :aria-current="isActive(item) ? 'page' : undefined"
+    >
+      <component
+        :is="item.icon"
+        class="icon-nav-icon"
+        :size="18"
+        :stroke-width="1.75"
+      />
+      <span class="icon-nav-text">{{ item.text }}</span>
+    </a>
   </nav>
 </template>
 
 <style scoped>
-.custom-nav {
+.icon-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
-  /* VitePressの他の要素と同じ高さに揃える */
+  gap: 2px;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
   height: var(--vp-nav-height);
 }
 
-.nav-link {
+.icon-nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 0 12px;
-  height: 32px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--vp-c-text-1);
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 8px;
+  color: var(--vp-c-text-2);
   text-decoration: none;
-  transition: color 0.25s, background-color 0.25s;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    padding 0.25s ease;
+  overflow: hidden;
 }
 
-.nav-link:hover {
-  color: var(--vp-c-brand-1);
+.icon-nav-link:hover {
+  color: var(--vp-c-text-1);
   background-color: var(--vp-c-default-soft);
+  padding: 0 14px 0 10px;
 }
 
-.nav-link.active {
+.icon-nav-link.active {
   color: var(--vp-c-brand-1);
 }
 
-/* ホームリンク - アイコンのみ */
-.nav-link.home-link {
-  padding: 0 8px;
+.icon-nav-link.active:hover {
+  background-color: var(--vp-c-brand-soft);
 }
 
-.nav-icon {
+.icon-nav-icon {
   flex-shrink: 0;
-  opacity: 0.85;
+  transition: transform 0.2s ease;
 }
 
-.nav-link:hover .nav-icon,
-.nav-link.active .nav-icon {
+.icon-nav-link:hover .icon-nav-icon {
+  transform: scale(1.05);
+}
+
+.icon-nav-text {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-width 0.25s ease,
+    opacity 0.2s ease,
+    margin 0.25s ease;
+  margin-left: 0;
+}
+
+.icon-nav-link:hover .icon-nav-text {
+  max-width: 120px;
   opacity: 1;
+  margin-left: 8px;
 }
 
-.nav-text {
-  line-height: 32px;
-}
-
-/* 分割線 */
-.nav-divider {
-  width: 1px;
-  height: 24px;
-  background-color: var(--vp-c-divider);
-  margin: 0 8px;
-}
-
-/* タブレット以下で非表示（ハンバーガーメニューを使用） */
+/* 959px以下で非表示（VitePressのモバイルメニューを使用） */
 @media (max-width: 959px) {
-  .custom-nav {
+  .icon-nav {
     display: none;
   }
 }
