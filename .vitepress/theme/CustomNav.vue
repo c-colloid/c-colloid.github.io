@@ -78,7 +78,9 @@ function isActive(item: { activeMatch?: string; link?: string }) {
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-left: 24px;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
 }
 
 .nav-link {

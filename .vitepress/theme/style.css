@@ -172,17 +172,6 @@
   display: none !important;
 }
 
-/* カスタムナビの位置を固定（サイドバーの有無に関係なく一定の位置） */
-.VPNavBar .content-body {
-  /* サイドバー時のパディングを無効化して位置を固定 */
-  padding-left: 0 !important;
-}
-
-.VPNavBar.has-sidebar .content {
-  /* サイドバー時の左パディングを調整 */
-  padding-left: 0 !important;
-}
-
 /* ============================================
    Sidebar - Information Architecture
    ============================================ */

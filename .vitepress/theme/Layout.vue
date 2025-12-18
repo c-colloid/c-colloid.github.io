@@ -7,7 +7,7 @@ const { Layout } = DefaultTheme
 
 <template>
   <Layout>
-    <template #nav-bar-content-before>
+    <template #nav-bar-title-after>
       <CustomNav />
     </template>
   </Layout>
