@@ -25,6 +25,9 @@ export default defineConfig({
       { text: 'PBReplacer', link: '/pbreplacer/', activeMatch: '/pbreplacer/'},
       { text: 'FXCreator', link: '/fxcreator/', activeMatch: '/fxcreator/' },
       { text: 'LipSyncSetter', link: '/lipsyncsetter/', activeMatch: '/lipsyncsetter/' },
+      { text: 'NDMFDeform', link: '/ndmfdeform/', activeMatch: '/ndmfdeform/' },
+      { text: 'UITK Font Fix', link: '/uitk-font-fix/', activeMatch: '/uitk-font-fix/' },
+      { text: 'Agent Panel', link: '/agentpanel/', activeMatch: '/agentpanel/' },
     ],
 
     sidebar: {
@@ -47,7 +50,9 @@ export default defineConfig({
             { text: '概要', link: '/pbreplacer/' },
             { text: '導入方法', link: '/pbreplacer/getting-started' },
             { text: '使い方', link: '/pbreplacer/usage' },
+            { text: 'PBRemap', link: '/pbreplacer/pbremap' },
             { text: '詳細設定', link: '/pbreplacer/details' },
+            { text: '困ったとき', link: '/pbreplacer/troubleshooting' },
             { text: '更新履歴', link: '/pbreplacer/changelog' },
           ]
         }
@@ -82,6 +87,43 @@ export default defineConfig({
           ]
         }
       ],
+      '/ndmfdeform/': [
+        {
+          text: 'NDMFDeform',
+          items: [
+            { text: '概要', link: '/ndmfdeform/' },
+            { text: '導入方法', link: '/ndmfdeform/getting-started' },
+            { text: '使い方', link: '/ndmfdeform/usage' },
+            { text: '詳細', link: '/ndmfdeform/details' },
+            { text: '更新履歴', link: '/ndmfdeform/changelog' },
+          ]
+        }
+      ],
+      '/uitk-font-fix/': [
+        {
+          text: 'UITK Font Fix',
+          items: [
+            { text: '概要', link: '/uitk-font-fix/' },
+            { text: '導入方法', link: '/uitk-font-fix/getting-started' },
+            { text: '使い方', link: '/uitk-font-fix/usage' },
+            { text: '詳細', link: '/uitk-font-fix/details' },
+            { text: '更新履歴', link: '/uitk-font-fix/changelog' },
+          ]
+        }
+      ],
+      '/agentpanel/': [
+        {
+          text: 'Agent Panel for Unity',
+          items: [
+            { text: '概要', link: '/agentpanel/' },
+            { text: '導入方法', link: '/agentpanel/getting-started' },
+            { text: '使い方', link: '/agentpanel/usage' },
+            { text: '詳細設定', link: '/agentpanel/details' },
+            { text: 'Pro機能', link: '/agentpanel/pro' },
+            { text: '更新履歴', link: '/agentpanel/changelog' },
+          ]
+        }
+      ],
     },
 
     socialLinks: [
@@ -90,7 +132,7 @@ export default defineConfig({
 
     footer: {
       message: 'VRChat向けUnity拡張ツール',
-      copyright: '© 2024 c-colloid / FUTEIKEI',
+      copyright: '© 2024-2026 c-colloid / FUTEIKEI',
     },
 
     search: {

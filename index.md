@@ -21,7 +21,7 @@ features:
     linkText: ドキュメント →
   - icon: 🔄
     title: PBReplacer
-    details: PhysBoneをアーマチュアから分離。一括編集やQuest対応を簡単に
+    details: PhysBoneやコライダーを1オブジェクト1コンポーネントに整理。別アバターへの移植にも対応
     link: /pbreplacer/
     linkText: ドキュメント →
   - icon: 🎛️
@@ -33,5 +33,20 @@ features:
     title: LipSyncSetter
     details: リップシンクの設定を補助。表情設定を簡単に
     link: /lipsyncsetter/
+    linkText: ドキュメント →
+  - icon: 🌊
+    title: NDMFDeform
+    details: メッシュ変形のDeformをNDMFで非破壊に実行
+    link: /ndmfdeform/
+    linkText: ドキュメント →
+  - icon: 🔤
+    title: UITK Font Fix
+    details: UI Toolkit製エディタ拡張の日本語・等幅フォント表示を安定させる開発者向けパッケージ
+    link: /uitk-font-fix/
+    linkText: ドキュメント →
+  - icon: 🤖
+    title: Agent Panel for Unity
+    details: UnityエディタにドッキングできるClaude Codeのチャットパネル
+    link: /agentpanel/
     linkText: ドキュメント →
 ---

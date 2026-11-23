@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { House, MousePointerClick, RefreshCcw, Sparkles, AudioLines } from 'lucide-vue-next'
+import { House, MousePointerClick, RefreshCcw, Sparkles, AudioLines, Waves, Type, Bot } from 'lucide-vue-next'
 import { computed } from 'vue'
 
 const { page } = useData()
@@ -36,6 +36,24 @@ const navItems = [
     link: '/lipsyncsetter/',
     icon: AudioLines,
     activeMatch: '/lipsyncsetter/'
+  },
+  {
+    text: 'NDMFDeform',
+    link: '/ndmfdeform/',
+    icon: Waves,
+    activeMatch: '/ndmfdeform/'
+  },
+  {
+    text: 'UITK Font Fix',
+    link: '/uitk-font-fix/',
+    icon: Type,
+    activeMatch: '/uitk-font-fix/'
+  },
+  {
+    text: 'Agent Panel',
+    link: '/agentpanel/',
+    icon: Bot,
+    activeMatch: '/agentpanel/'
   },
 ]
 

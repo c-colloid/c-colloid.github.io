@@ -10,12 +10,16 @@ interface ChangelogData {
   entries: ChangelogEntry[]
   raw: string
   error?: string
+  // 表示件数を絞った場合の、省略した件数と全文へのリンク
+  omitted?: number
+  sourceUrl?: string
 }
 
 interface FetchOptions {
   repo: string
   path?: string  // デフォルト: CHANGELOG.md
   branch?: string  // デフォルト: main
+  limit?: number  // 表示する最大件数（省略時は全件）
 }
 
 // リポジトリ設定
@@ -26,11 +30,20 @@ const REPO_CONFIG: Record<string, FetchOptions> = {
   },
   'PBReplacer': {
     repo: 'PBReplacer-VPM',
-    path: 'Packages/jp.colloid.pbreplacer/ChangeLog.txt'
+    path: 'ChangeLog.txt'
   },
   'LipSyncSetter': {
     repo: 'LipSyncSetter',
     path: 'CHANGELOG.md'
+  },
+  'UITKFontFix': {
+    repo: 'UITKFontFix',
+    path: 'jp.colloid.uitk-font-fix/CHANGELOG.md'
+  },
+  'AgentPanel': {
+    repo: 'AgentPanelForUnity',
+    path: 'jp.colloid.unity-agent-panel/CHANGELOG.md',
+    limit: 10
   },
   // FXCreater用（複数Changelog対応）
   'FXCreater-EyeJiggling': {
@@ -74,9 +87,16 @@ export async function fetchChangelog(toolName: string): Promise<ChangelogData> {
     }
 
     const raw = await response.text()
-    const entries = parseChangelog(raw)
+    const all = parseChangelog(raw)
+    const entries = config.limit ? all.slice(0, config.limit) : all
 
-    return { entries, raw }
+    return {
+      entries,
+      // 全文はページに埋め込まない（巨大なCHANGELOGでページが重くなるため）
+      raw: '',
+      omitted: all.length - entries.length,
+      sourceUrl: `https://github.com/c-colloid/${config.repo}/blob/${branch}/${path}`
+    }
   } catch (e) {
     return {
       entries: [],
@@ -117,45 +137,58 @@ export async function fetchMultipleChangelogs(toolNames: string[]): Promise<Chan
   }
 }
 
+// 見出し行からバージョンと日付を取り出す。対応フォーマット:
+//   ## [1.4.1] - 2024-01-15 / ## [1.4.1]2024.12.18 / ## 1.4.1 - 2024-01-15 / ## v1.4.1
+//   [3.0.0]2026.09.09（"##" なしのテキスト形式）
+function matchHeading(line: string): { version: string; date: string } | null {
+  const m =
+    line.match(/^##\s+\[v?(\d[^\]]*)\]\s*-?\s*(.*)$/) ||
+    line.match(/^##\s+v?(\d\S*)\s*-?\s*(.*)$/) ||
+    line.match(/^\[v?(\d[^\]]*)\]\s*-?\s*(.*)$/)
+  if (!m) return null
+  return { version: m[1].trim(), date: m[2].trim() }
+}
+
 function parseChangelog(content: string): ChangelogEntry[] {
   const entries: ChangelogEntry[] = []
-  const lines = content.split('\n')
+  const lines = content.replace(/\r\n?/g, '\n').split('\n')
+  // "##" 見出しを使わないテキスト形式では、各行を箇条書きとして扱う
+  const plainText = !lines.some(line => /^##\s/.test(line))
 
   let currentEntry: ChangelogEntry | null = null
+  let skipping = false
   let contentLines: string[] = []
 
+  const flush = () => {
+    if (currentEntry) {
+      currentEntry.content = contentLines.join('\n').trim()
+      entries.push(currentEntry)
+    }
+    currentEntry = null
+    contentLines = []
+  }
+
   for (const line of lines) {
-    // 複数のフォーマットに対応:
-    // ## [1.4.1] - 2024-01-15
-    // ## [1.4.1]2024.12.18
-    // ## 1.4.1 - 2024-01-15
-    // ## v1.4.1
-    const match = line.match(/^##\s+\[?v?([^\]\s\-]+)\]?\s*[-]?\s*(.*)$/)
+    const heading = matchHeading(line)
 
-    if (match) {
-      // 前のエントリを保存
-      if (currentEntry) {
-        currentEntry.content = contentLines.join('\n').trim()
-        entries.push(currentEntry)
+    if (heading) {
+      flush()
+      skipping = false
+      currentEntry = { version: heading.version, date: heading.date, content: '' }
+    } else if (/^##\s/.test(line)) {
+      // [Unreleased] などバージョンではない見出しは読み飛ばす
+      flush()
+      skipping = true
+    } else if (currentEntry && !skipping) {
+      if (plainText && line.trim() !== '') {
+        const sub = line.match(/^\s+[-*]\s+(.*)$/)
+        contentLines.push(sub ? `  - ${sub[1]}` : `- ${line.trim().replace(/^[-*]\s+/, '')}`)
+      } else {
+        contentLines.push(line)
       }
-
-      // 新しいエントリを開始
-      currentEntry = {
-        version: match[1],
-        date: match[2]?.trim() || '',
-        content: ''
-      }
-      contentLines = []
-    } else if (currentEntry) {
-      contentLines.push(line)
     }
   }
-
-  // 最後のエントリを保存
-  if (currentEntry) {
-    currentEntry.content = contentLines.join('\n').trim()
-    entries.push(currentEntry)
-  }
+  flush()
 
   return entries
 }
